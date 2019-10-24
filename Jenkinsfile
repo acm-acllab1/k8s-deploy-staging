@@ -62,7 +62,7 @@ pipeline {
     }
     
     // DO NOT uncomment until 10_01 Lab
-    /*
+    
     stage('Staging Warm Up') {
       steps {
         echo "Waiting for the service to start..."
@@ -99,7 +99,7 @@ pipeline {
             }
           }
         }
-        sleep 60
+        sleep 180
       }
     }
 
@@ -133,7 +133,7 @@ pipeline {
           }
         }
         //sleeping to allow data to arrive in Dynatrace
-        sleep 60
+        sleep 180
         perfSigDynatraceReports(
           envId: 'Dynatrace Tenant', 
           nonFunctionalFailure: 2, 
@@ -141,6 +141,6 @@ pipeline {
         )
       }
     }
-    */
+    
   }
 }
